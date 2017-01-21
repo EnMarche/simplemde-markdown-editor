@@ -666,7 +666,7 @@ function drawLink(editor) {
 	var cm = editor.codemirror;
 	var stat = getState(cm);
 	var options = editor.options;
-	var url = "http://";
+	var url = "http://url-du-lien.com";
 	if(options.promptURLs) {
 		url = prompt(options.promptTexts.link);
 		if(!url) {
@@ -1323,7 +1323,7 @@ var toolbarBuiltInButtons = {
 
 var insertTexts = {
 	link: ["[", "](#url#)"],
-	image: ["![](", "#url#)"],
+	image: ["<figure>\n    <img src=\"http://url-de-l-image.com", "\">\n    <figcaption>Légende de l'image</figcaption>\n</figure>"],
 	table: ["", "\n\n| Column 1 | Column 2 | Column 3 |\n| -------- | -------- | -------- |\n| Text     | Text     | Text     |\n\n"],
 	horizontalRule: ["", "\n\n-----\n\n"]
 };
