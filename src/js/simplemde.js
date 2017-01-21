@@ -192,6 +192,15 @@ function createPreviewContainer(className, previewConfig) {
 				link.href = previewConfig.editorCss[i];
 				idoc.head.appendChild(link);
 			}
+
+			var section = idoc.createElement("section");
+			section.className = "article";
+			idoc.body.appendChild(section);
+
+			var article = idoc.createElement("article");
+			article.id = "article-content";
+			article.className = "text--summary l__wrapper--slim";
+			section.appendChild(article);
 		};
 	} else {
 		preview = document.createElement("div");
@@ -208,7 +217,7 @@ function getIframeDocument(iframe) {
 
 function getPreviewContentContainer(preview) {
 	if(preview.tagName == "IFRAME") {
-		return getIframeDocument(preview).body;
+		return getIframeDocument(preview).getElementById("article-content");
 	}
 
 	return preview;
