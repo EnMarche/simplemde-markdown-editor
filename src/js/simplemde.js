@@ -1322,7 +1322,7 @@ var toolbarBuiltInButtons = {
 };
 
 var insertTexts = {
-	link: ["[", "](#url#)"],
+	link: ["<a href=\"http://url-du-lien.com\" target=\"_blank\">", "</a>"],
 	image: ["<figure>\n    <img src=\"http://url-de-l-image.com", "\">\n    <figcaption>Légende de l'image</figcaption>\n</figure>"],
 	table: ["", "\n\n| Column 1 | Column 2 | Column 3 |\n| -------- | -------- | -------- |\n| Text     | Text     | Text     |\n\n"],
 	horizontalRule: ["", "\n\n-----\n\n"]
